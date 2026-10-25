@@ -1,66 +1,52 @@
-<!DOCTYPE html> <!-- must be placed at top declaring every html webpage-->
-<html lang="en"> <!-- primary language is english-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8"> <!--converts binary to text--> 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alexis Zou</title>
+    <title>About · Alexis Zou</title>
     <meta name="description" content="Personal site of Alexis Zou">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/favicon.png">
     <link rel="stylesheet" href="/style.css">
+    <script src="/theme.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-
 </head>
-<body> <!-- what users see--> 
+<body>
     <nav>
-        <a class="brand" href="/">Alexis Zou</a> <!--creates hyperlink--> 
+        <a class="brand" href="/">Alexis Zou</a>
         <div class="nav-links">
-            <a href="/about/">About</a>
+            <a href="/projects/">Technical Projects</a>
+            <a href="/music/">Music</a>
+            <a class="active" href="/about/">About</a>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode"></button>
         </div>
     </nav>
 
     <main>
         <h1>About Me</h1>
-        <p>Hello! I'm <b>Alexis Zou</b></p>
-        <p>- I'm a freshman at Stanford University studying Computer Science and AI.</p>
-        <p>- I'm interested in tech ethics, artificial intelligence, and technology's applications in healthcare and business.</p>
-    
-        <h2>Experience</h2>
-        <div class="timeline">
-            <div class="entry">
-                <h3>Computational Researcher, Oregon Health and Science University</h3>
-                <p class="date">Jun 2023 — Present</p>
-                <p>Conducted machine learning-based model analysis by analyzing and visualizing neurological data collected from 6,000+ neurons using Python, Matplotlib, pandas, NumPy. Presented at 2025 Society for Neuroscience Conference (first author) in San Diego, CA. Publication in process. </p>
-                <p class="skills">Python, Jupyter, Git, NumPy, Pandas, Matplotlib</p>
-            </div>
-
-            <div class="entry">
-                <h3>Researcher, Summer Science Program</h3>
-                <p class="date">Jun 2025 — July 2025</p>
-                <p>Researched antibiotic resistance in V. natriegens by conducting bioinformatics data analysis and wet-lab experiments using BLAST, AlphaFold, PCR. Co-authored research manuscript and poster.</p>
-                <p class="skills">AlphaFold, BLAST, DNA extraction, PCR</p>
-            </div>
-
-            <div class="entry">
-                <h3>Data Analyst Intern, Oregon Health Authority</h3>
-                <p class="date">Oct 2022 — Oct 2025</p>
-                <p>Co-authored a student health needs assessment report distributed across 85 Oregon school districts by analyzing and interpreting 4,200+ student survey responses.</p>
-            </div>
-
+        <div class="lede">
+            <p>Hi, I'm Alexis! I'm a first year student at Stanford studying computer science, originally from Lake Oswego, Oregon. I'm interested in AI, product, tech ethics, and the way technology can shape healthcare and business.</p>
+            <p>I started doing research in high school, first at the Oregon Health Authority working on student health data and then in a computational neuroscience lab at OHSU, where I still work. Lately I've been spending more time building things, like Sencha, an app for small businesses and student clubs running pop-ups.</p>
+            <p>Outside of class, I play piano and I'm on Stanford's competitive club golf team. I'm also involved in Stanford Women in CS.</p>
         </div>
 
+        <h2>Awards &amp; Recognition</h2>
+        <ul class="plain-list">
+            <li><span>Society for Neuroscience (SfN), first-author poster<span class="detail">San Diego</span></span><span class="year">2025</span></li>
+            <li><span>NCWIT Aspirations in Computing, Regional Winner<span class="detail">Oregon / Washington</span></span><span class="year">2024–25</span></li>
+            <li><span>TEDxYouth@LincolnStreet speaker<span class="detail">"Programming the Future: Why AI Needs More Girls in STEM"</span></span><span class="year">2024–25</span></li>
+            <li><span>Two-time Oregon 6A Girls Golf State Champions<span class="detail">Team captain</span></span><span class="year">2024, 2025</span></li>
+            <li><span>MTNA National Senior Piano Duet Competition, 1st Place<span class="detail">Atlanta, GA</span></span><span class="year">2023–24</span></li>
+            <li><span>NPR's <i>From the Top</i>, Show 460<span class="detail">From the Top Scholar</span></span><span class="year">2024–25</span></li>
+        </ul>
     </main>
 
     <footer>
         <p>Made with love by Alexis Zou</p>
-        <div class="social"> <!--group content--> 
-            <a href="mailto:alexisz@stanford.edu" aria-label="Email">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a href="https://github.com/alexis-zou" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/alexiszou/" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
+        <div class="social">
+            <a href="mailto:alexisz@stanford.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/alexis-zou" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/alexiszou/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </footer>
 </body>

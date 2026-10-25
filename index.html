@@ -1,43 +1,93 @@
-<!DOCTYPE html> <!-- must be placed at top declaring every html webpage -->
-<html lang="en"> <!-- primary language is english-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8"> <!-- converts binary to text-->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alexis Zou</title>
     <meta name="description" content="Personal site of Alexis Zou">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/favicon.png">
     <link rel="stylesheet" href="/style.css">
+    <script src="/theme.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-
 </head>
-<body> <!-- what users see -->
+<body>
     <nav>
-        <a class="brand" href="/">Alexis Zou</a> <!--creates hyperlink-->
+        <a class="brand" href="/">Alexis Zou</a>
         <div class="nav-links">
+            <a href="/projects/">Technical Projects</a>
+            <a href="/music/">Music</a>
             <a href="/about/">About</a>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode"></button>
         </div>
     </nav>
 
-
-    <main><main class="hero"></main>
-        <img class="avatar" src="/assets/headshot.jpg" alt="Alexis Zou">
-        <p class="intro">
-            Hi, nice to meet you! I'm a first year student at Stanford University studying CS & AI. I'm interested in artificial intelligence, tech ethics, and the ways technology can transform healthcare and business. Feel free to reach out! </a>
+    <main class="hero">
+        <div class="avatar-zone">
+            <div class="avatar-wrap">
+                <img class="avatar" src="/assets/headshot.jpg" alt="Alexis Zou">
+            </div>
+        </div>
+        <h1 class="typed" aria-label="Hi, I'm Alexis!"><span class="typed-text" aria-hidden="true">Hi, I'm Alexis!</span></h1>
+        <p>
+            I'm a first year student at Stanford studying computer science.
+            I'm interested in AI, product, tech ethics, and the way technology can shape healthcare and business.
+            Feel free to reach out!
         </p>
     </main>
 
     <footer>
         <p>Made with love by Alexis Zou</p>
-        <div class="social"> <!-- group content -->
-            <a href="mailto:alexisz@stanford.edu" aria-label="Email">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a href="https://github.com/alexis-zou" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/alexiszou/" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
+        <div class="social">
+            <a href="mailto:alexisz@stanford.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/alexis-zou" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/alexiszou/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </footer>
+
+    <script>
+        // types the heading out, pauses, erases, and repeats
+        (function () {
+            var el = document.querySelector(".typed-text");
+            if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+            var text = el.textContent;
+            var i = 0;
+            var deleting = false;
+            function tick() {
+                el.textContent = text.slice(0, i);
+                var delay = deleting ? 50 : 110;
+                if (!deleting && i === text.length) { deleting = true; delay = 2600; }
+                else if (deleting && i === 0) { deleting = false; delay = 700; }
+                i += deleting ? -1 : 1;
+                setTimeout(tick, delay);
+            }
+            tick();
+        })();
+
+        // little sparkles around the photo while the mouse is over it
+        (function () {
+            var zone = document.querySelector(".avatar-zone");
+            if (!zone || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+            var star = '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.3 5.7 11.4 12 12-6.3.6-11.4 5.7-12 12-.6-6.3-5.7-11.4-12-12C6.3 11.4 11.4 6.3 12 0z"/></svg>';
+            var timer = null;
+            function spawn() {
+                var s = document.createElement("span");
+                s.className = "sparkle";
+                s.innerHTML = star;
+                s.style.setProperty("--size", (10 + Math.random() * 14) + "px");
+                s.style.left = (Math.random() * 110 - 5) + "%";
+                s.style.top = (Math.random() * 110 - 5) + "%";
+                zone.appendChild(s);
+                s.addEventListener("animationend", function () { s.remove(); });
+            }
+            zone.addEventListener("mouseenter", function () {
+                spawn(); spawn();
+                timer = setInterval(spawn, 160);
+            });
+            zone.addEventListener("mouseleave", function () {
+                clearInterval(timer);
+            });
+        })();
+    </script>
 </body>
 </html>

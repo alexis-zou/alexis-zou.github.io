@@ -1,33 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"> <!-- converts binary to text-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Alexis Zou</title>
-        <meta name="description" content="Personal site of Alexis Zou">
-        <link rel="stylesheet" href="/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    </head>
-    <body>
-        <nav>
-            <a class="brand" href="/">Alexis Zou</a> <!--creates hyperlink-->
-            <div class="nav-links">
-                <a href="/projects/">Technical Projects</a>
-                <a href="/about/">About</a>
-            </div>
-        </nav>
-        <main>
-            <h1>Projects</h1>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Technical Projects · Alexis Zou</title>
+    <meta name="description" content="Personal site of Alexis Zou">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/theme.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <a class="brand" href="/">Alexis Zou</a>
+        <div class="nav-links">
+            <a class="active" href="/projects/">Technical Projects</a>
+            <a href="/music/">Music</a>
+            <a href="/about/">About</a>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode"></button>
+        </div>
+    </nav>
 
-            <div class="project-grid">
-                <a class="project" href="https://hearingbrain.org/">
-                    <img src="/assets/lbhb.jpg" loading="lazy">
-                    <h2>Organization of </h2>
-                </a>
+    <main>
+        <h1>Technical Projects</h1>
 
-            </div>
-        </main>
-    
-    
-    </body>
+        <div class="project-grid">
+            <article class="project">
+                <img src="/assets/sencha.png" alt="Sencha logo: a smiling matcha bowl with a whisk" loading="lazy">
+                <div class="project-body">
+                    <h3>Sencha</h3>
+                    <p>Developed a mobile web app that helps business owners and young entrepreneurs track orders, manage inventory, and analyze profits. Inspired by challenges I encountered running school-wide fundraisers and concession stands. Tested by student clubs with 100+ members and local businesses at the Lake Oswego Farmers Market.</p>
+                    <ul class="tags"><li>Next.js</li><li>React</li><li>Supabase</li><li>HTML/CSS</li><li>Figma</li></ul>
+                    <div class="links">
+                        <a href="https://senchaapp.vercel.app/" target="_blank" rel="noopener">Live app</a>
+                        <a href="https://github.com/alexis-zou/sencha" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project">
+                <img src="/assets/lbhb.jpg" alt="Auditory cortex research" loading="lazy">
+                <div class="project-body">
+                    <h3>Encoding Models of Auditory Cortex</h3>
+                    <p>Running and evaluating encoding model fits to predict auditory cortex responses to natural sounds at OHSU. Comparing model performance across 6,000+ neurons and analyzing and visualizing results. Presented at ICAC and SfN 2025 (first author).</p>
+                    <ul class="tags"><li>Python</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li></ul>
+                    <div class="links">
+                        <a href="https://www.abstractsonline.com/pp8/#!/21171/presentation/37672" target="_blank" rel="noopener">SfN 2025 abstract</a>
+                        <!-- TODO: add ICAC poster link if you have one -->
+                    </div>
+                </div>
+            </article>
+
+            <article class="project">
+                <img src="/assets/vnatriegens.png" alt="Protein structure overlay from AlphaFold" loading="lazy">
+                <div class="project-body">
+                    <h3>Antibiotic Resistance in <i>V. natriegens</i></h3>
+                    <p>Researched antibiotic resistance in <i>V. natriegens</i> at the Summer Science Program by conducting bioinformatics data analysis (AlphaFold, BLAST, Galaxy) and using wet-lab techniques (DNA extraction, PCR). Co-authored a 24-page manuscript and presented a research poster.</p>
+                    <ul class="tags"><li>AlphaFold</li><li>BLAST</li><li>Galaxy</li><li>PCR</li></ul>
+                    <div class="links">
+                        <a href="https://drive.google.com/file/d/1TWek1gRRH9f9r6Nk_R0KBUFGrI4uGlQF/view?usp=drive_link" target="_blank" rel="noopener">Manuscript</a>
+                        <a href="https://drive.google.com/file/d/1fBnG5c_qxGgiAhSrslNQ6Q0r6bFt7Kqy/view?usp=drive_link" target="_blank" rel="noopener">Poster</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project">
+                <img src="/assets/oha-report.png" alt="Cover of the Student Voices report, June 2025" loading="lazy">
+                <div class="project-body">
+                    <h3>Student Voices: Unmet Health Needs of Oregon Youth</h3>
+                    <p>Co-authored and published a 17-page student unmet mental and physical health needs assessment report for the Oregon Health Authority, distributed across 85 Oregon school districts. Analyzed and interpreted 4,206 student survey responses with OHA Program Design and Evaluation Services.</p>
+                    <ul class="tags"><li>Data analysis</li><li>Survey research</li><li>Public health</li></ul>
+                    <div class="links">
+                        <a href="https://www.oregon.gov/oha/PH/BIRTHDEATHCERTIFICATES/SURVEYS/Documents/SHS/2025/Reports/Unmet%20needs%20report%20FINAL%209.5.25.pdf" target="_blank" rel="noopener">Report (PDF)</a>
+                        <a href="https://ktvz.com/health/2025/10/21/oregons-latest-statewide-student-survey-shines-a-spotlight-on-unmet-health-needs-makes-an-urgent-call-for-more-support/" target="_blank" rel="noopener">KTVZ</a>
+                        <a href="https://www.koin.com/news/oregon/invalidated-isolated-and-defeated-oha-urges-support-for-teen-mental-health/" target="_blank" rel="noopener">KOIN</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with love by Alexis Zou</p>
+        <div class="social">
+            <a href="mailto:alexisz@stanford.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/alexis-zou" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/alexiszou/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
 </html>
