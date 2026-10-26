@@ -154,6 +154,15 @@ h2 { font-size: 23px; font-weight: 500; margin: 3.5rem 0 1.5rem; }
 }
 
 .hero p { color: var(--muted); font-size: 18px; margin: 0; }
+.hero .reach-out { margin-top: 1rem; }
+
+.hero .hero-social {
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero .hero-social a { font-size: 24px; }
 
 .typed {
   font-size: clamp(30px, 6vw, 42px);

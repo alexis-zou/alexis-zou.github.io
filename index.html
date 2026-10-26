@@ -32,19 +32,15 @@
         <h1 class="typed" aria-label="Hi, I'm Alexis!"><span class="typed-text" aria-hidden="true">Hi, I'm Alexis!</span></h1>
         <p>
             I'm a first year student at Stanford studying computer science.
-            I'm interested in AI, product, tech ethics, and the way technology can shape healthcare and business.
-            Feel free to reach out!
+            I'm interested in AI, product, tech ethics, and the way technology can shape business and healthcare.
         </p>
-    </main>
-
-    <footer>
-        <p>Made with love by Alexis Zou</p>
-        <div class="social">
+        <p class="reach-out">Feel free to reach out!</p>
+        <div class="social hero-social">
             <a href="mailto:alexisz@stanford.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://github.com/alexis-zou" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/alexiszou/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/alexis-zou" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
-    </footer>
+    </main>
 
     <script>
         // types the heading out, pauses, erases, and repeats
@@ -65,13 +61,14 @@
             tick();
         })();
 
-        // little sparkles around the photo while the mouse is over it
+        // little sparkles that keep twinkling around the photo
         (function () {
             var zone = document.querySelector(".avatar-zone");
             if (!zone || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
             var star = '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.3 5.7 11.4 12 12-6.3.6-11.4 5.7-12 12-.6-6.3-5.7-11.4-12-12C6.3 11.4 11.4 6.3 12 0z"/></svg>';
-            var timer = null;
             function spawn() {
+                // skip while the tab is hidden, since paused animations never finish
+                if (document.hidden) return;
                 var s = document.createElement("span");
                 s.className = "sparkle";
                 s.innerHTML = star;
@@ -81,13 +78,7 @@
                 zone.appendChild(s);
                 s.addEventListener("animationend", function () { s.remove(); });
             }
-            zone.addEventListener("mouseenter", function () {
-                spawn(); spawn();
-                timer = setInterval(spawn, 160);
-            });
-            zone.addEventListener("mouseleave", function () {
-                clearInterval(timer);
-            });
+            setInterval(spawn, 220);
         })();
     </script>
 </body>
