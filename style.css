@@ -324,6 +324,8 @@ h2 { font-size: 23px; font-weight: 500; margin: 3.5rem 0 1.5rem; }
 
 .media:hover .thumb img { transform: scale(1.04); }
 
+.thumb.photo { aspect-ratio: 4 / 3; }
+
 /* play button on video thumbnails */
 .thumb.video::after {
   content: "";
