@@ -234,6 +234,9 @@ h2 { font-size: 23px; font-weight: 500; margin: 3.5rem 0 1.5rem; }
 }
 
 .plain-list li:first-child { border-top: 1px solid var(--hairline); }
+
+/* the footer already draws a line, so skip the last divider when a list ends the page */
+main > .plain-list:last-child li:last-child { border-bottom: none; }
 .plain-list .year { color: var(--muted); white-space: nowrap; font-size: 15px; }
 .plain-list .detail { display: block; color: var(--muted); font-size: 15px; }
 
